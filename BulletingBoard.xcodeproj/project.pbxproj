@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		49930C8622329AA800235825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930C8522329AA800235825 /* AppDelegate.swift */; };
-		49930C8822329AA800235825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930C8722329AA800235825 /* ViewController.swift */; };
 		49930C8B22329AA800235825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49930C8922329AA800235825 /* Main.storyboard */; };
 		49930C8D22329AA800235825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49930C8C22329AA800235825 /* Assets.xcassets */; };
 		49930C9022329AA800235825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49930C8E22329AA800235825 /* LaunchScreen.storyboard */; };
+		49930C9822329C4A00235825 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930C9722329C4A00235825 /* MessageListTableViewController.swift */; };
+		49930C9D22329D2900235825 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930C9C22329D2900235825 /* Message.swift */; };
+		49930CA12232A42D00235825 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930CA02232A42D00235825 /* MessageController.swift */; };
+		49930CA32232A45000235825 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49930CA22232A45000235825 /* CloudKitManager.swift */; };
+		49C5222F223BE54A0004694F /* MessageSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5222E223BE54A0004694F /* MessageSearchTableViewController.swift */; };
+		49C52231223FDEA50004694F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C52230223FDEA50004694F /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49930C8222329AA800235825 /* BulletingBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulletingBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49930C8522329AA800235825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49930C8722329AA800235825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49930C8A22329AA800235825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49930C8C22329AA800235825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49930C8F22329AA800235825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49930C9122329AA800235825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49930C9722329C4A00235825 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
+		49930C9C22329D2900235825 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		49930CA02232A42D00235825 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		49930CA22232A45000235825 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		49C5222E223BE54A0004694F /* MessageSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSearchTableViewController.swift; sourceTree = "<group>"; };
+		49C52230223FDEA50004694F /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,59 @@
 		49930C8422329AA800235825 /* BulletingBoard */ = {
 			isa = PBXGroup;
 			children = (
-				49930C8522329AA800235825 /* AppDelegate.swift */,
-				49930C8722329AA800235825 /* ViewController.swift */,
-				49930C8922329AA800235825 /* Main.storyboard */,
-				49930C8C22329AA800235825 /* Assets.xcassets */,
-				49930C8E22329AA800235825 /* LaunchScreen.storyboard */,
-				49930C9122329AA800235825 /* Info.plist */,
+				49930C9E22329D2E00235825 /* Models */,
+				49930C9F2232A3C800235825 /* Controllers */,
+				49930C9B22329CE000235825 /* ViewControllers */,
+				49930C9A22329CBC00235825 /* UI */,
+				49930C9922329C9000235825 /* Resources */,
 			);
 			path = BulletingBoard;
+			sourceTree = "<group>";
+		};
+		49930C9922329C9000235825 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49930C8522329AA800235825 /* AppDelegate.swift */,
+				49930C8C22329AA800235825 /* Assets.xcassets */,
+				49930C9122329AA800235825 /* Info.plist */,
+				49C52230223FDEA50004694F /* DateHelper.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		49930C9A22329CBC00235825 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				49930C8922329AA800235825 /* Main.storyboard */,
+				49930C8E22329AA800235825 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		49930C9B22329CE000235825 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				49930C9722329C4A00235825 /* MessageListTableViewController.swift */,
+				49C5222E223BE54A0004694F /* MessageSearchTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		49930C9E22329D2E00235825 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49930C9C22329D2900235825 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49930C9F2232A3C800235825 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49930CA02232A42D00235825 /* MessageController.swift */,
+				49930CA22232A45000235825 /* CloudKitManager.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +151,11 @@
 				TargetAttributes = {
 					49930C8122329AA800235825 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49930C8822329AA800235825 /* ViewController.swift in Sources */,
+				49930C9D22329D2900235825 /* Message.swift in Sources */,
 				49930C8622329AA800235825 /* AppDelegate.swift in Sources */,
+				49930C9822329C4A00235825 /* MessageListTableViewController.swift in Sources */,
+				49C5222F223BE54A0004694F /* MessageSearchTableViewController.swift in Sources */,
+				49930CA12232A42D00235825 /* MessageController.swift in Sources */,
+				49C52231223FDEA50004694F /* DateHelper.swift in Sources */,
+				49930CA32232A45000235825 /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +348,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BulletingBoard/Info.plist;
+				DEVELOPMENT_TEAM = 294QD2DU2P;
+				INFOPLIST_FILE = "$(SRCROOT)/BulletingBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +366,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BulletingBoard/Info.plist;
+				DEVELOPMENT_TEAM = 294QD2DU2P;
+				INFOPLIST_FILE = "$(SRCROOT)/BulletingBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
